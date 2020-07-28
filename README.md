@@ -1,4 +1,5 @@
 # A Server That Responds To Ping
+[![drewf7](https://circleci.com/github/drewf7/server-that-responds-to-pings.svg?style=svg)](https://app.circleci.com/pipelines/github/drewf7/server-that-responds-to-pings)
 That's it. Listens on every path. Responds "Pong" to any request.
 
 Logs requesting path and ip.
