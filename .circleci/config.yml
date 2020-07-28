@@ -10,13 +10,8 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: 
-              command: npm start
-              background: true
-            # wait for the server to start responding.
-            - run:
-              command: |
-                wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 10 http://localhost:3000
+            - run: npm start &
+            - run: sleep 30
             - run: npm test
 workflows:
     build-and-test:
